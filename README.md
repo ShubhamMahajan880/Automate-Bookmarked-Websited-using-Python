@@ -26,6 +26,7 @@ This project focuses on improving daily productivity by automating repetitive br
 - BeautifulSoup (HTML parsing)
 
 ---
+
 ## 📂 Project Structure
 
 Automate-Bookmarked-Websited-using-Python
@@ -44,4 +45,32 @@ Automate-Bookmarked-Websited-using-Python
 ├── requirements.txt
 └── README.md
 
+
+---
+
+## ▶️ Usage
+
+### Using Text File (CLI Mode)
+
+```bash
+python main.py --input-type txt --file bookmarks/bookmarks.txt
+
+
+python main.py --input-type html --file bookmarks/bookmarks.html
+
+run_html.py
+
+
+---
+
+## ✅ WHAT THIS FIXES
+- Headings render properly.
+- Bullet points are readable.
+- Project structure is clean.
+- Repo looks **professional and recruiter-safe**.
+- Easy to explain in interviews (10–15 minutes).
+
+---
+
+### Final reply once done:
 
