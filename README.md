@@ -29,22 +29,23 @@ This project focuses on improving daily productivity by automating repetitive br
 
 ## 📂 Project Structure
 
-Automate-Bookmarked-Websited-using-Python
+```text
+Automate-Bookmarked-Websited-using-Python/
 │
-├── bookmarks
-│ ├── bookmarks.txt
-│ └── bookmarks.html
+├── bookmarks/
+│   ├── bookmarks.txt
+│   └── bookmarks.html
 │
-├── src
-│ ├── loader.py
-│ ├── validator.py
-│ └── opener.py
+├── src/
+│   ├── loader.py
+│   ├── validator.py
+│   └── opener.py
 │
 ├── main.py
 ├── run_html.py
 ├── requirements.txt
 └── README.md
-
+```
 
 ---
 
