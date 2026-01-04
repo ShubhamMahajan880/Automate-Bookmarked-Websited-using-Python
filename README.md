@@ -26,7 +26,6 @@ This project focuses on improving daily productivity by automating repetitive br
 - BeautifulSoup (HTML parsing)
 
 ---
-
 ## 📂 Project Structure
 
 Automate-Bookmarked-Websited-using-Python
