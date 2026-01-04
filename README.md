@@ -1,21 +1,30 @@
 # Automate Bookmarked Websites using Python
 
-A Python-based automation tool that opens frequently used bookmarked websites automatically using either a text file or a browser-exported HTML bookmarks file.
+A Python-based local automation tool that allows users to open all their bookmarked websites at once using either a text file or a browser-exported HTML bookmarks file.
 
-This project focuses on improving daily productivity by automating repetitive browser tasks.
+This tool is designed to be **reusable by anyone** by simply replacing the bookmarks file with their own.
 
 ---
 
-## 🚀 Features
+## 🎯 What This Tool Solves
 
-- Automatically opens multiple bookmarked websites in the default browser.
+Many users open the same set of websites daily (Gmail, GitHub, LinkedIn, dashboards, etc.).  
+Opening them one by one is repetitive and time-consuming.
+
+This project automates that process by opening **all bookmarked websites in a single run**.
+
+---
+
+## 🚀 Key Features
+
+- Opens multiple bookmarked websites in the default browser automatically.
 - Supports two input formats:
-  - Plain text file (`.txt`).
-  - Browser-exported bookmarks file (`.html`).
-- Removes duplicate URLs before execution.
-- Validates URLs to avoid broken or invalid links.
+  - Plain text file (`.txt`)
+  - Browser-exported bookmarks file (`.html`)
+- Removes duplicate URLs.
+- Validates URLs before opening.
 - Displays a summary of total, valid, and invalid links.
-- Supports both CLI-based execution and one-click execution for HTML bookmarks.
+- Designed as a **portable local tool** — no hosting required.
 
 ---
 
@@ -23,7 +32,7 @@ This project focuses on improving daily productivity by automating repetitive br
 
 - **Python**
 - **Standard Python Libraries**
-- **BeautifulSoup** – HTML bookmark parsing
+- **BeautifulSoup** – for parsing HTML bookmark files
 
 ---
 
@@ -49,58 +58,98 @@ Automate-Bookmarked-Websited-using-Python/
 
 ---
 
-## ▶️ Usage
+## 👥 How Anyone Can Use This Tool (IMPORTANT)
 
-### 1️⃣ Using Text File (CLI Mode)
+This project is **not tied to one machine or one user**.
 
+Any user can use it by following these steps:
+
+### Step 1: Clone the Repository
 ```bash
-python main.py --input-type txt --file bookmarks/bookmarks.txt
+git clone https://github.com/ShubhamMahajan880/Automate-Bookmarked-Websited-using-Python.git
+cd Automate-Bookmarked-Websited-using-Python
 ```
 
 ---
 
-### 2️⃣ Using HTML Bookmarks File (CLI Mode)
+### Step 2: Export Your Own Bookmarks
 
+From your browser:
+- Export bookmarks as an **HTML file**.
+- Rename it to `bookmarks.html`.
+
+Place it inside:
+```
+bookmarks/bookmarks.html
+```
+
+You can replace the existing file — **no code changes required**.
+
+---
+
+### Step 3: Install Dependencies
+```bash
+python -m pip install -r requirements.txt
+```
+
+---
+
+## ▶️ Usage Options
+
+### 1️⃣ One-Click Execution (Recommended)
+
+```bash
+python run_html.py
+```
+
+This will:
+- Read `bookmarks/bookmarks.html`
+- Validate all URLs
+- Open all valid websites in the default browser
+
+---
+
+### 2️⃣ CLI Execution (Advanced)
+
+Using text file:
+```bash
+python main.py --input-type txt --file bookmarks/bookmarks.txt
+```
+
+Using HTML file:
 ```bash
 python main.py --input-type html --file bookmarks/bookmarks.html
 ```
 
 ---
 
-### 3️⃣ One-Click Execution for HTML Bookmarks
+## ⚙️ How It Works (Internally)
 
-```bash
-python run_html.py
-```
-
-This mode directly opens all valid bookmarks from the exported HTML file without requiring CLI arguments.
-
----
-
-## ⚙️ How It Works
-
-1. Loads URLs from the provided input file.
+1. Loads URLs from the provided bookmarks file.
 2. Cleans and removes duplicate entries.
-3. Validates URLs to ensure correctness.
+3. Validates URLs to avoid broken links.
 4. Opens all valid URLs in the default browser.
-5. Displays execution summary in the terminal.
+5. Prints a summary of execution results.
 
 ---
 
-## ⚠️ Limitations
+## ⚠️ Design Note (Why This Is a Local Tool)
 
-- Designed for personal productivity use.
-- Does not handle authentication-based or session-dependent websites.
-- Browser behavior depends on system default settings.
+This tool is intentionally designed for **local execution** because:
+- Browsers run on the user’s machine.
+- System-level automation cannot be hosted remotely.
+- This ensures user privacy and full control.
+
+This is expected behavior for automation tools and CLI utilities.
 
 ---
 
-## 🔮 Future Enhancements
+## 🔮 Possible Enhancements
 
-- GUI-based interface for non-technical users.
-- Support for additional browser bookmark formats.
-- Scheduling support for automatic daily execution.
-- Logging and execution history tracking.
+- GUI interface for non-technical users.
+- Scheduled execution (daily startup automation).
+- Support for additional bookmark formats.
+- Logging and execution history.
 
 ---
 
@@ -116,9 +165,9 @@ This project is designed, developed, and maintained by **Shubham Mahajan**.
 ## ⭐ Why This Project Matters
 
 This project demonstrates:
-- Practical Python automation skills.
-- Clean modular design.
-- File parsing and validation logic.
-- Real-world productivity improvement use case.
+- Practical Python automation.
+- File parsing and validation.
+- Modular and reusable design.
+- Real-world productivity improvement.
 
-Suitable for showcasing Python automation fundamentals in interviews.
+It is intended as a **local automation utility**, not a hosted web application.
